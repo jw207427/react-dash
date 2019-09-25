@@ -1,0 +1,68 @@
+.kpi-section {
+    position:relative;
+    display:flex;
+    align-items:center;
+    flex-direction:row;
+    justify-content:space-between;
+    margin:auto;
+    height:35vh;
+    width:75vw;
+}
+.cost-section {
+    position:relative;
+    display:flex;
+    align-items:center;
+    flex-direction:row;
+    justify-content:space-between;
+    margin:auto;
+    height:40vh;
+    width:75vw;
+}
+
+.market-section {
+    position:relative;
+    display:flex;
+    align-items:center;
+    flex-direction:row;
+    justify-content:space-between;
+    margin:auto;
+    height:60vh;
+    width:75vw;
+
+}
+.kpi {
+    padding: 10px 10px 10px 10px;
+    width:33%;
+    height:95%;
+
+}
+.cost {
+    padding: 10px 10px 10px 10px;
+    width:40%;
+    height:95%;
+
+}
+.body{
+    background-color:rgb(222, 224, 223);
+}
+
+.state {
+    padding:10px 10px 10px 10px;
+    width:60%;
+    height:95%;
+}
+
+.region {
+    padding:10px 10px 10px 10px;
+    width:32%;
+    height:95%;
+}
+.month {
+    padding:10px 10px 10px 10px;
+    width:60%;
+    height:95%
+}
+
+.control{
+    padding:10px 10px 10px 10px;
+}
