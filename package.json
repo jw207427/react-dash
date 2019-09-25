@@ -1,5 +1,5 @@
 {
-  "name": "nivo-chart",
+  "name": "yes",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -38,5 +38,21 @@
     "@material-ui/core": "^4.4.2",
     "@nivo/pie": "^0.59.1",
     "react-scripts": "^3.1.2"
-  }
+  },
+  "description": "nivo",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jw207427/react-dash.git"
+  },
+  "author": "James Wu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jw207427/react-dash/issues"
+  },
+  "homepage": "https://github.com/jw207427/react-dash#readme",
+  "keywords": [
+    "chart",
+    "nivo"
+  ]
 }
