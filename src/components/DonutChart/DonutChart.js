@@ -3,7 +3,26 @@ import { ResponsivePie } from "@nivo/pie";
 import './DonutChart.css'
 
 const theme = {
-    background: "#ffffff"
+    background: "#ffffff",
+    tooltip: {
+        container: {
+            background: 'white',
+            color: 'inherit',
+            fontSize: '12px',
+            borderRadius: '2px',
+            boxShadow: '0 1px 2px rgba(0, 0, 0, 0.25)',
+            padding: '5px 9px'
+        },
+        basic: {
+            whiteSpace: 'pre',
+            display: 'flex',
+            alignItems: 'center'
+        },
+        table: {},
+        tableCell: {
+            padding: '3px 5px'
+        }
+    },
 };
 
 const donut_legends = [

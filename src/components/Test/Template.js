@@ -71,83 +71,37 @@ const data = {
             id:"West",
             'On Premise':72,
             'Off Premise':457,
+            'On Premise Cost':10000,
+            'Off Premise Cost':20000,
+            'On Premise Reach':5000,
+            'Off Premise Reach':10000,
         },
         {
             id:"East",
             'On Premise':89,
             'Off Premise':1038,
+            'On Premise Cost':10000,
+            'Off Premise Cost':20000,
+            'On Premise Reach':5000,
+            'Off Premise Reach':10000,
         },
         {
             id:"Control",
             'On Premise':12,
             'Off Premise':235,
+            'On Premise Cost':10000,
+            'Off Premise Cost':20000,
+            'On Premise Reach':5000,
+            'Off Premise Reach':10000,
         },
         {
             id:"Central",
             'On Premise':127,
             'Off Premise':753,
-        },
-    ],
-    month:[
-        {
-            id:"Jul",
-            'On Premise':0,
-            'Off Premise':71,
-        },
-        {
-            id:"Aug",
-            'On Premise':0,
-            'Off Premise':72,
-        },
-        {
-            id:"Sep",
-            'On Premise':3,
-            'Off Premise':235,
-        },
-        {
-            id:"Oct",
-            'On Premise':37,
-            'Off Premise':332,
-        },
-        {
-            id:"Nov",
-            'On Premise':50,
-            'Off Premise':487,
-        },
-        {
-            id:"Dec",
-            'On Premise':52,
-            'Off Premise':552,
-        },
-        {
-            id:"Jan",
-            'On Premise':14,
-            'Off Premise':27,
-        },
-        {
-            id:"Feb",
-            'On Premise':41,
-            'Off Premise':238,
-        },
-        {
-            id:"Mar",
-            'On Premise':42,
-            'Off Premise':223,
-        },
-        {
-            id:"Apr",
-            'On Premise':24,
-            'Off Premise':116,
-        },
-        {
-            id:"May",
-            'On Premise':23,
-            'Off Premise':111,
-        },
-        {
-            id:"Jun",
-            'On Premise':13,
-            'Off Premise':14,
+            'On Premise Cost':10000,
+            'Off Premise Cost':20000,
+            'On Premise Reach':5000,
+            'Off Premise Reach':10000,
         },
     ],
     monthScatter:[
@@ -338,6 +292,10 @@ class Template extends React.Component {
 
         return (
             <div>
+                <div className={'controls'}>
+                    <span>On Premise</span>
+                    <span>Off Premise</span>
+                </div>
                 <div className='kpi-section'>
                     <div className={'kpi'}>
                         <DonutChart
@@ -392,8 +350,9 @@ class Template extends React.Component {
                         <ChoroplethChart
                             title={'Breakdown by States'}
                             keys={['NY', 'AL']}
+                            labels={['Events: 100<br>Reach: 10,000<br>Cost: $20,000', 'Events: 1,000<br>Reach: 10,000<br>Cost: $20,000']}
                             values={[3000, 1000]}
-                            barTitle={'Budget ($)'}
+                            barTitle={'Events'}
                         />
                     </div>
                     <div className='region'>

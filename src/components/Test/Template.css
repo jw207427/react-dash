@@ -1,3 +1,11 @@
+.controls{
+    position: relative;
+    display: flex;
+    align-items:center;
+    flex-direction:row;
+    justify-content:space-around;
+    margin:auto
+}
 .kpi-section {
     position:relative;
     display:flex;

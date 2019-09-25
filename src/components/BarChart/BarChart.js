@@ -14,7 +14,7 @@ const theme = {
 
 class BarChart extends React.Component {
     render() {
-        const { title, data, keys, index, groupMode, yLabel, orientation, customTooltip} = this.props;
+        const { title, data, keys, index, groupMode, yLabel, orientation} = this.props;
 
         return (
             <div className='bar-chart'>
@@ -63,7 +63,29 @@ class BarChart extends React.Component {
                     }}
                     motionStiffness={90}
                     motionDamping={15}
-                    tooltip={customTooltip ? customTooltip : null}
+                    // tooltip={function(e){return e.data['On Premise']}}
+                    tooltip={({id, data, color})=>(
+                        <div style={{
+                                color: color,
+                                padding: '3px 0',
+                                textAlign:'left',
+                                textSize:'12px'
+                            }}>
+                            {(id==='On Premise') ?
+                                <div>
+                                    <strong>On Premise</strong> <br/>
+                                    Events: {data['On Premise'].toLocaleString()}<br/>
+                                    Reach: {data['On Premise Reach'].toLocaleString()}<br/>
+                                    Cost: ${data['On Premise Reach'].toLocaleString()}<br/>
+                                </div> : <div>
+                                    <strong>Off Premise</strong> <br/>
+                                    Events: {data['Off Premise'].toLocaleString()}<br/>
+                                    Reach: {data['Off Premise Reach'].toLocaleString()}<br/>
+                                    Cost: ${data['Off Premise Reach'].toLocaleString()}<br/>
+                                </div>
+                            }
+                        </div>
+                    )}
                     layout={orientation ? orientation:'vertical'}
                 />
             </div>

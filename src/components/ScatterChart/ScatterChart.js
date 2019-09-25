@@ -51,6 +51,7 @@ class ScatterChart extends React.Component {
                     pointBorderWidth={2}
                     pointBorderColor={{ from: 'serieColor' }}
                     useMesh={true}
+                    enableSlices="x"
                     sliceTooltip={({ slice }) => {
                         return (
                             <div
@@ -58,17 +59,25 @@ class ScatterChart extends React.Component {
                                     background: 'white',
                                     padding: '9px 12px',
                                     border: '1px solid #ccc',
+                                    textAlign: 'left',
+                                    fontSize:'12px',
                                 }}
                             >
-                                <div>x: {slice.id}</div>
-                            {/*<br />*/}
-                            {/*{`Events: ${data.y.toLocaleString()}`}*/}
-                            {/*<br />*/}
-                            {/*{`Cost: $${data.cost.toLocaleString()}`}*/}
-                            {/*<br />*/}
-                            {/*{`Reach: ${data.reach.toLocaleString()}`}*/}
-                        </div>
-                        )}
+                                {slice.points.map(point => (
+                                    <div
+                                        key={point.id}
+                                        style={{
+                                            color: point.serieColor,
+                                            padding: '3px 0',
+                                        }}
+                                    >
+                                        <strong>{point.id.split('.')[0]}</strong><br/>
+                                        Events: {point.data.yFormatted.toLocaleString()}<br/>
+                                        Reach: {point.data.reach.toLocaleString()}<br/>
+                                        Cost: ${point.data.reach.toLocaleString()}<br/>
+                                    </div>
+                                ))}
+                            </div>)}
                     }
                 />
             </div>
