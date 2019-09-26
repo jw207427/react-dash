@@ -6,6 +6,7 @@ import DonutChart from "../DonutChart/DonutChart";
 import ScatterChart from "../ScatterChart/ScatterChart";
 import ChoroplethChart from "../ChoroplethChart/ChoroplethChart";
 import TreeChart from "../TreeChart/TreeChart";
+import Checkbox from "../CheckBox/Checkbox"
 
 import './Template.css'
 
@@ -333,6 +334,12 @@ const data = {
 
 class Template extends React.Component {
 
+    state = { checked: false }
+
+    handleCheckboxChange = event => {
+        this.setState({ checked: event.target.checked })
+    }
+
     render() {
         // create legend
         const keys = ["Off Premise", "On Premise"];
@@ -340,8 +347,22 @@ class Template extends React.Component {
         return (
             <div>
                 <div className={'controls'}>
-                    <span>On Premise</span>
-                    <span>Off Premise</span>
+                    <label className={'checkbox'}>
+                        <Checkbox
+                            checked={this.state.checked}
+                            onChange={this.handleCheckboxChange}
+                            color={'#fb8072'}
+                        />
+                        <span style={{ marginLeft: 8 }}>On Premise</span>
+                    </label>
+                    <label>
+                        <Checkbox
+                            checked={this.state.checked}
+                            onChange={this.handleCheckboxChange}
+                            color={'#80b1d3'}
+                        />
+                        <span style={{ marginLeft: 8 }}>Off Premise</span>
+                    </label>
                 </div>
                 <div className='kpi-section'>
                     <div className={'kpi'}>

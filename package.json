@@ -11,7 +11,8 @@
     "plotly.js-geo-dist": "^1.49.5",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
-    "react-plotly.js": "^2.3.0"
+    "react-plotly.js": "^2.3.0",
+    "styled-components": "^4.4.0"
   },
   "scripts": {
     "start": "GENERATE_SOURCEMAP=false react-scripts start",

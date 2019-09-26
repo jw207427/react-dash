@@ -3,8 +3,9 @@
     display: flex;
     align-items:center;
     flex-direction:row;
-    justify-content:space-around;
-    margin:auto
+    justify-content:flex-end;
+    margin:auto;
+    width:75vw;
 }
 .kpi-section {
     position:relative;
@@ -37,6 +38,9 @@
     height:60vh;
     width:75vw;
 
+}
+.checkbox{
+    padding: 10px 10px 10px 10px;
 }
 .kpi {
     padding: 10px 10px 10px 10px;
