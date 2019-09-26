@@ -65,9 +65,14 @@
     width:32%;
     height:95%;
 }
-.month {
+.program {
     padding:10px 10px 10px 10px;
     width:60%;
+    height:95%
+}
+.month {
+    padding:10px 10px 10px 10px;
+    width:100%;
     height:95%
 }
 

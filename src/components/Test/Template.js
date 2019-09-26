@@ -5,6 +5,7 @@ import BarChart from "../BarChart/BarChart";
 import DonutChart from "../DonutChart/DonutChart";
 import ScatterChart from "../ScatterChart/ScatterChart";
 import ChoroplethChart from "../ChoroplethChart/ChoroplethChart";
+import TreeChart from "../TreeChart/TreeChart";
 
 import './Template.css'
 
@@ -281,7 +282,53 @@ const data = {
             "id": "05",
             "value": 352541
         }
-    ]
+    ],
+    program:{
+        "name": "Baileys",
+        "color": "#ffffff",
+        "children": [
+            {
+                "name": "Off Premise",
+                "color": "#fb8072",
+                "children": [
+                    {
+                        "name": "F20 Baileys Program 1 Off Premise",
+                        "color": "#fb8072",
+                        "loc": 1000,
+                        "cost": 20000,
+                        "reach":10000
+                    },
+                    {
+                        "name": "F20 Baileys Program 2 Off Premise",
+                        "color": "#fb8072",
+                        "loc": 3000,
+                        "cost": 60000,
+                        "reach":40000
+                    },
+                    {
+                        "name": "F20 Baileys Program 3 Off Premise",
+                        "color": "#fb8072",
+                        "loc": 3000,
+                        "cost": 60000,
+                        "reach":40000
+                    },
+                ]
+            },
+            {
+                "name": "On Premise",
+                "color": "#80b1d3",
+                "children": [
+                    {
+                        "name": "F20 Baileys Program 1 On Premise",
+                        "color": "#80b1d3",
+                        "loc": 5000,
+                        "cost": 100000,
+                        "reach":40000
+                    }
+                ]
+            }
+        ]
+    }
 };
 
 class Template extends React.Component {
@@ -337,6 +384,14 @@ class Template extends React.Component {
                             displayLabel={false}
                         />
                     </div>
+                    <div className={'month'}>
+                        <TreeChart
+                            title={'Breakdown by Program'}
+                            data={data.program}
+                        />
+                    </div>
+                </div>
+                <div className={'cost-section'}>
                     <div className='month'>
                         <ScatterChart
                             title={'Break Down By Month'}
