@@ -7,7 +7,7 @@
     "@nivo/geo": "^0.59.2",
     "@nivo/line": "^0.59.3",
     "i": "^0.3.6",
-    "plotly.js": "^1.49.5",
+    "plotly.js": "^2.25.2",
     "plotly.js-geo-dist": "^1.49.5",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
